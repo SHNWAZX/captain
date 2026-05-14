@@ -631,7 +631,6 @@ export default function Portfolio() {
         <Services />
         <Skills />
         <Stats />
-        <RedBanner />
         <Contact />
       </main>
       <Footer />
