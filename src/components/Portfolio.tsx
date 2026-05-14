@@ -16,7 +16,7 @@ import BlurText from "./BlurText";
 import AnimatedCursor from "./AnimatedCursor";
 import CopyGuard from "./CopyGuard";
 import ScrollAudio from "./ScrollAudio";
-import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
+import heroVideoUrl from "@/assets/hero-video.mp4?url";
 
 const NAV = [
   
@@ -113,7 +113,7 @@ function Hero() {
         playsInline
         preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
-        src={heroVideoAsset.url}
+        src={heroVideoUrl}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
       <div className="relative z-10 min-h-[100svh] flex flex-col justify-end px-5 sm:px-8 lg:px-16 pb-20 pt-32">
