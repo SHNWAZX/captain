@@ -736,26 +736,20 @@ function Footer() {
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <span className="text-white/30 text-xs font-body">
-          © 2026 IFlexElite. All rights reserved.
+          © 2026 CAPTAIN. All rights reserved.
         </span>
         <div className="flex items-center gap-5">
           <a
-            href="https://github.com/IFlexElite"
+            href="https://github.com/captain108"
             className="text-white/40 hover:text-white text-xs font-body"
           >
             GitHub
           </a>
           <a
-            href="https://x.com/IFlexElite"
+            href="https://t.me/captain_tfx"
             className="text-white/40 hover:text-white text-xs font-body"
           >
-            X
-          </a>
-          <a
-            href="https://instagram.com/iflexelite"
-            className="text-white/40 hover:text-white text-xs font-body"
-          >
-            Instagram
+            Telegram
           </a>
         </div>
       </div>
