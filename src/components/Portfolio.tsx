@@ -118,19 +118,6 @@ function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
       <div className="relative z-10 min-h-[100svh] flex flex-col justify-end px-5 sm:px-8 lg:px-16 pb-20 pt-32">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.2 }}
-          className="liquid-glass rounded-full inline-flex items-center gap-2 pl-1 pr-3 py-1 self-start mb-5"
-        >
-          <span className="bg-white text-black rounded-full px-2.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider">
-            Open
-          </span>
-          <span className="text-white/70 text-[11px] font-light">
-            Available for new work · 2026
-          </span>
-        </motion.div>
 
         <BlurText
           text="Pixels with intent. Code with edge."
