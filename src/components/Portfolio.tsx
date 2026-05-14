@@ -768,6 +768,7 @@ export default function Portfolio() {
         <Hero />
         <Work />
         <Services />
+        <Skills />
         <Stats />
         <Testimonials />
         <Contact />
