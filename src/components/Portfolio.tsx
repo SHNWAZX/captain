@@ -233,7 +233,7 @@ function Services() {
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           className="text-3xl sm:text-5xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-10 sm:mb-14 max-w-3xl"
         >
-          Services built for momentum.
+          Built to ship. Designed to convert.
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {SERVICES.map(({ Icon, title, desc }, i) => (
@@ -455,7 +455,7 @@ function RedBanner() {
           transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
           className="text-[2.6rem] leading-[0.95] sm:text-6xl lg:text-8xl xl:text-[7rem] font-heading italic text-white tracking-[-1.5px] max-w-5xl"
         >
-          Crafting interfaces that feel inevitable.
+          Pixels with intent. Code with edge.
         </motion.h2>
       </div>
     </section>
@@ -631,6 +631,7 @@ export default function Portfolio() {
         <Services />
         <Skills />
         <Stats />
+        <RedBanner />
         <Contact />
       </main>
       <Footer />
