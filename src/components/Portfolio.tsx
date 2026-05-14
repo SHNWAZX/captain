@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import HlsVideo from "./HlsVideo";
 import BlurText from "./BlurText";
-import AnimatedCursor from "./AnimatedCursor";
+
 import CopyGuard from "./CopyGuard";
 import ScrollAudio from "./ScrollAudio";
 import heroVideoUrl from "@/assets/hero-video.mp4?url";
@@ -609,7 +609,7 @@ function Footer() {
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-black text-white font-body antialiased">
-      <AnimatedCursor />
+      
       <CopyGuard />
       <ScrollAudio src="/ambient.m4a" targetId="testimonials" />
       <Nav />
