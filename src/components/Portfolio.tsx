@@ -488,7 +488,7 @@ function Stats() {
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
           className="text-3xl sm:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.95] mb-6 max-w-3xl"
         >
-          Hi, I'm Captain — independent developer with a bias for craft and speed.
+          I'm Captain — a developer who builds the kind of websites people actually remember.
         </motion.h2>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -497,9 +497,10 @@ function Stats() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-white/55 font-body font-light text-sm sm:text-base leading-relaxed max-w-2xl mb-10"
         >
-          I design and build fast, modern websites — from e-commerce stores and SaaS
-          dashboards to portfolios and landing pages. Clean code, thoughtful UX, and
-          performance that actually shows up in the numbers.
+          I work with founders, creators and small teams to ship websites that load
+          fast, look sharp and convert. From a single landing page to a full
+          storefront or dashboard — I handle the design, the code and the hosting,
+          so you get one person who actually owns the outcome.
         </motion.p>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
