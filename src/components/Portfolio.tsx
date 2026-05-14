@@ -3,8 +3,6 @@ import { motion } from "motion/react";
 import {
   ArrowUpRight,
   Github,
-  Instagram,
-  Twitter,
   Send,
   Zap,
   Palette,
