@@ -46,8 +46,8 @@ function Nav() {
     >
       <div className="px-5 sm:px-8 lg:px-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <span className="font-heading italic text-white text-base sm:text-lg">
-            IFlexElite
+          <span className="font-heading italic text-white text-base sm:text-lg tracking-[0.3em]">
+            C A P T A I N
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
