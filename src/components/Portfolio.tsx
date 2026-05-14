@@ -380,6 +380,75 @@ function Services() {
   );
 }
 
+const SKILLS = [
+  {
+    title: "Website Design",
+    desc: "Conversion-focused, unforgettable brand interfaces.",
+  },
+  {
+    title: "Web Hosting",
+    desc: "cPanel, free migration, lightning-fast performance.",
+  },
+  {
+    title: "Code Development",
+    desc: "HTML, CSS, JS, React — clean, scalable code.",
+  },
+  {
+    title: "Responsive Builds",
+    desc: "Perfect on any screen size, every time.",
+  },
+];
+
+function Skills() {
+  return (
+    <section
+      id="skills"
+      className="relative bg-black py-20 sm:py-28 px-5 sm:px-8 lg:px-16"
+    >
+      <motion.span
+        initial={{ opacity: 0, x: -15 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5 }}
+        className="block text-white/30 font-body text-[10px] tracking-[0.3em] uppercase mb-3"
+      >
+        Skills
+      </motion.span>
+      <motion.h2
+        initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+        className="text-3xl sm:text-5xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-10 sm:mb-14 max-w-3xl"
+      >
+        Crafted with precision.
+      </motion.h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {SKILLS.map((s, i) => (
+          <motion.div
+            key={s.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
+            className="liquid-glass rounded-2xl p-6 sm:p-8 flex flex-col transition-transform duration-500 hover:-translate-y-1"
+          >
+            <span className="text-white/30 font-body text-[10px] tracking-[0.3em] uppercase mb-4">
+              0{i + 1}
+            </span>
+            <h3 className="text-base sm:text-lg font-body font-semibold text-white mb-2">
+              {s.title}
+            </h3>
+            <p className="text-xs sm:text-sm font-body font-light text-white/45 leading-relaxed">
+              {s.desc}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 const STATS = [
   { num: "60+", desc: "Sites shipped across SaaS, brand, and editorial" },
   { num: "98%", desc: "Client satisfaction across the last two years" },
