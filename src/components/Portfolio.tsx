@@ -143,8 +143,17 @@ function Hero() {
           transition={{ delay: 0.9 }}
           className="text-sm sm:text-base lg:text-lg text-white/55 font-body font-light leading-relaxed max-w-xl mb-8"
         >
-          I'm <span className="text-white">Captain</span> — a web developer & UX strategist
-          building fast, beautiful, conversion-focused experiences.
+          I'm <span className="text-white">Captain</span> — a full-stack web developer
+          designing, coding and hosting websites that load fast, look sharp and actually convert.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ delay: 1.0 }}
+          className="text-xs sm:text-sm text-white/40 font-body font-light leading-relaxed max-w-xl mb-8"
+        >
+          Websites · Web hosting · Clean code · Responsive on every screen.
         </motion.p>
 
         <motion.div
