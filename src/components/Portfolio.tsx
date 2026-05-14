@@ -16,6 +16,7 @@ import BlurText from "./BlurText";
 import AnimatedCursor from "./AnimatedCursor";
 import CopyGuard from "./CopyGuard";
 import ScrollAudio from "./ScrollAudio";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 
 const NAV = [
   { id: "work", label: "Work" },
@@ -44,8 +45,8 @@ function Nav() {
     >
       <div className="px-5 sm:px-8 lg:px-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <span className="font-heading italic text-white text-base sm:text-lg tracking-[0.3em]">
-            C A P T A I N
+          <span className="font-heading italic text-white text-lg sm:text-xl">
+            Captain
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
@@ -112,7 +113,7 @@ function Hero() {
         playsInline
         preload="metadata"
         className="absolute inset-0 w-full h-full object-cover"
-        src="/videos/hero.mp4"
+        src={heroVideoAsset.url}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70" />
       <div className="relative z-10 min-h-[100svh] flex flex-col justify-end px-5 sm:px-8 lg:px-16 pb-20 pt-32">
@@ -142,8 +143,8 @@ function Hero() {
           transition={{ delay: 0.9 }}
           className="text-sm sm:text-base lg:text-lg text-white/55 font-body font-light leading-relaxed max-w-xl mb-8"
         >
-          I'm <span className="text-white tracking-[0.25em]">C A P T A I N</span> — a web developer & UX
-          strategist building fast, beautiful, conversion-focused experiences.
+          I'm <span className="text-white">Captain</span> — a web developer & UX strategist
+          building fast, beautiful, conversion-focused experiences.
         </motion.p>
 
         <motion.div
@@ -174,31 +175,31 @@ function Hero() {
 
 const PROJECTS = [
   {
-    title: "Designed to convert. Built to perform.",
-    body: "Landing experience for a SaaS platform — every pixel tuned for clarity and momentum.",
-    tag: "Web Design",
+    title: "E-commerce storefront, reimagined.",
+    body: "Headless commerce build with custom checkout, instant search, and a 92 Lighthouse score.",
+    tag: "E-commerce",
     videoSrc:
       "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085844_21a8f4b3-dea5-4ede-be16-d53f6973bb14.mp4",
     hls: false,
   },
   {
-    title: "Smart UX, automatically.",
-    body: "Real-time UX system that learns from every click, scroll, and conversion to optimize itself.",
-    tag: "Product · UX",
+    title: "SaaS dashboard with live data.",
+    body: "Realtime analytics dashboard with charts, filtering, and role-based access for a B2B platform.",
+    tag: "SaaS · Dashboard",
     videoSrc: "https://stream.mux.com/T6oQJQ02cQ6N01TR6iHwZkKFkbepS34dkkIc9iukgy400g.m3u8",
     hls: true,
   },
   {
-    title: "Brand systems that scale.",
-    body: "Visual identity & motion language built to grow with the brand across every surface.",
-    tag: "Brand · Motion",
+    title: "Personal portfolio, story-led.",
+    body: "Editorial portfolio for a creative director — bold typography, scroll choreography, custom motion.",
+    tag: "Portfolio",
     videoSrc: "https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8",
     hls: true,
   },
   {
-    title: "Editorial-grade interfaces.",
-    body: "Magazine-style storytelling layouts engineered for performance and accessibility.",
-    tag: "Editorial",
+    title: "Mobile-first landing page.",
+    body: "High-conversion launch page for a fintech app — A/B tested, SEO-tuned, ready to scale.",
+    tag: "Landing Page",
     videoSrc: "https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8",
     hls: true,
   },
@@ -485,10 +486,21 @@ function Stats() {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-          className="text-3xl sm:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.95] mb-10 max-w-3xl"
+          className="text-3xl sm:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.95] mb-6 max-w-3xl"
         >
-          Independent designer & developer with a bias for craft and speed.
+          Hi, I'm Captain — independent developer with a bias for craft and speed.
         </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-white/55 font-body font-light text-sm sm:text-base leading-relaxed max-w-2xl mb-10"
+        >
+          I design and build fast, modern websites — from e-commerce stores and SaaS
+          dashboards to portfolios and landing pages. Clean code, thoughtful UX, and
+          performance that actually shows up in the numbers.
+        </motion.p>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
           {STATS.map((s, i) => (
@@ -681,12 +693,12 @@ function Contact() {
           <div className="flex items-center gap-3 mb-6">
             <img
               src="https://avatars.githubusercontent.com/u/190835907?v=4"
-              alt="CAPTAIN"
+              alt="Captain"
               className="w-12 h-12 rounded-full object-cover ring-1 ring-white/20"
             />
             <div>
-              <div className="text-white font-body text-sm font-medium tracking-[0.25em]">
-                C A P T A I N
+              <div className="text-white font-body text-sm font-medium">
+                Captain
               </div>
               <div className="text-white/40 text-[11px] font-body">
                 Web Developer & UX Strategist
@@ -734,7 +746,7 @@ function Footer() {
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <span className="text-white/30 text-xs font-body">
-          © 2026 CAPTAIN. All rights reserved.
+          © 2026 Captain. All rights reserved.
         </span>
         <div className="flex items-center gap-5">
           <a
