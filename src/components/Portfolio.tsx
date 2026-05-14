@@ -683,12 +683,12 @@ function Contact() {
           <div className="flex items-center gap-3 mb-6">
             <img
               src="https://avatars.githubusercontent.com/u/190835907?v=4"
-              alt="IFlexElite"
+              alt="CAPTAIN"
               className="w-12 h-12 rounded-full object-cover ring-1 ring-white/20"
             />
             <div>
-              <div className="text-white font-body text-sm font-medium">
-                IFlexElite
+              <div className="text-white font-body text-sm font-medium tracking-[0.25em]">
+                C A P T A I N
               </div>
               <div className="text-white/40 text-[11px] font-body">
                 Web Developer & UX Strategist
@@ -697,35 +697,24 @@ function Contact() {
           </div>
           <div className="space-y-3">
             <a
-              href="https://github.com/IFlexElite"
+              href="https://github.com/captain108"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between gap-3 text-white/70 hover:text-white text-sm font-body transition border-t border-white/10 pt-3"
             >
               <span className="inline-flex items-center gap-2.5">
-                <Github className="w-4 h-4" /> github.com/IFlexElite
+                <Github className="w-4 h-4" /> github.com/captain108
               </span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
             <a
-              href="https://x.com/IFlexElite"
+              href="https://t.me/captain_tfx"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between gap-3 text-white/70 hover:text-white text-sm font-body transition border-t border-white/10 pt-3"
             >
               <span className="inline-flex items-center gap-2.5">
-                <Twitter className="w-4 h-4" /> @IFlexElite
-              </span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="https://instagram.com/iflexelite"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center justify-between gap-3 text-white/70 hover:text-white text-sm font-body transition border-t border-white/10 pt-3"
-            >
-              <span className="inline-flex items-center gap-2.5">
-                <Instagram className="w-4 h-4" /> @iflexelite
+                <Send className="w-4 h-4" /> t.me/captain_tfx
               </span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
