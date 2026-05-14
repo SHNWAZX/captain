@@ -17,6 +17,7 @@ import AnimatedCursor from "./AnimatedCursor";
 import CopyGuard from "./CopyGuard";
 import ScrollAudio from "./ScrollAudio";
 import heroVideoUrl from "@/assets/hero-video.mp4?url";
+import avatarUrl from "@/assets/avatar.png";
 
 const NAV = [
   
@@ -543,7 +544,7 @@ function Contact() {
         >
           <div className="flex items-center gap-3 mb-6">
             <img
-              src="https://avatars.githubusercontent.com/u/190835907?v=4"
+              src={avatarUrl}
               alt="Captain"
               className="w-12 h-12 rounded-full object-cover ring-1 ring-white/20"
             />
