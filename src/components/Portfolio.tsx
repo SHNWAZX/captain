@@ -19,7 +19,7 @@ import ScrollAudio from "./ScrollAudio";
 import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
 
 const NAV = [
-  { id: "work", label: "Work" },
+  
   { id: "services", label: "Services" },
   { id: "skills", label: "Skills" },
   { id: "about", label: "About" },
@@ -168,128 +168,6 @@ function Hero() {
             Get in touch
           </a>
         </motion.div>
-      </div>
-    </section>
-  );
-}
-
-const PROJECTS = [
-  {
-    title: "E-commerce storefront, reimagined.",
-    body: "Headless commerce build with custom checkout, instant search, and a 92 Lighthouse score.",
-    tag: "E-commerce",
-    videoSrc:
-      "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260302_085844_21a8f4b3-dea5-4ede-be16-d53f6973bb14.mp4",
-    hls: false,
-  },
-  {
-    title: "SaaS dashboard with live data.",
-    body: "Realtime analytics dashboard with charts, filtering, and role-based access for a B2B platform.",
-    tag: "SaaS · Dashboard",
-    videoSrc: "https://stream.mux.com/T6oQJQ02cQ6N01TR6iHwZkKFkbepS34dkkIc9iukgy400g.m3u8",
-    hls: true,
-  },
-  {
-    title: "Personal portfolio, story-led.",
-    body: "Editorial portfolio for a creative director — bold typography, scroll choreography, custom motion.",
-    tag: "Portfolio",
-    videoSrc: "https://stream.mux.com/9JXDljEVWYwWu01PUkAemafDugK89o01BR6zqJ3aS9u00A.m3u8",
-    hls: true,
-  },
-  {
-    title: "Mobile-first landing page.",
-    body: "High-conversion launch page for a fintech app — A/B tested, SEO-tuned, ready to scale.",
-    tag: "Landing Page",
-    videoSrc: "https://stream.mux.com/s8pMcOvMQXc4GD6AX4e1o01xFogFxipmuKltNfSYza0200.m3u8",
-    hls: true,
-  },
-];
-
-function Work() {
-  return (
-    <section
-      id="work"
-      className="relative bg-black py-20 sm:py-28 px-5 sm:px-8 lg:px-16"
-    >
-      <div className="flex items-end justify-between mb-10 sm:mb-14">
-        <div>
-          <motion.span
-            initial={{ opacity: 0, x: -15 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.4 }}
-            transition={{ duration: 0.5 }}
-            className="block text-white/30 font-body text-[10px] tracking-[0.3em] uppercase mb-3"
-          >
-            Selected Work
-          </motion.span>
-          <motion.h2
-            initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-            className="text-3xl sm:text-5xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9]"
-          >
-            Projects, in motion.
-          </motion.h2>
-        </div>
-        <a
-          href="https://github.com/IFlexElite"
-          target="_blank"
-          rel="noreferrer"
-          className="hidden sm:inline-flex liquid-glass-strong rounded-full px-4 py-2 items-center gap-1.5 text-white text-xs font-body"
-        >
-          All projects <ArrowUpRight className="w-3.5 h-3.5" />
-        </a>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7">
-        {PROJECTS.map((p, i) => (
-          <motion.article
-            key={p.title}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: i * 0.08 }}
-            className="liquid-glass rounded-2xl overflow-hidden flex flex-col group transition-transform duration-500 hover:-translate-y-1"
-          >
-            <div className="h-52 sm:h-64 relative overflow-hidden">
-              {p.hls ? (
-                <HlsVideo
-                  src={p.videoSrc}
-                  className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
-                />
-              ) : (
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="w-full h-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
-                  src={p.videoSrc}
-                />
-              )}
-              <span className="absolute top-3 left-3 liquid-glass-strong rounded-full px-3 py-1 text-[10px] tracking-wider uppercase text-white">
-                {p.tag}
-              </span>
-            </div>
-            <div className="p-6 sm:p-8 flex-1 flex flex-col">
-              <h3 className="text-lg sm:text-2xl font-heading italic text-white mb-2 leading-tight">
-                {p.title}
-              </h3>
-              <p className="text-sm font-body font-light text-white/45 leading-relaxed">
-                {p.body}
-              </p>
-              <div className="mt-5 inline-flex items-center gap-1.5 text-white/70 text-xs font-body tracking-wider uppercase relative w-fit">
-                <span className="relative">
-                  Skills
-                  <span className="absolute left-0 -bottom-0.5 h-px w-full bg-white/70 origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out" />
-                </span>
-                <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-500 ease-out group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-white" />
-              </div>
-            </div>
-          </motion.article>
-        ))}
       </div>
     </section>
   );
@@ -777,7 +655,7 @@ export default function Portfolio() {
       <Nav />
       <main>
         <Hero />
-        <Work />
+        
         <Services />
         <Skills />
         <Stats />
