@@ -3,8 +3,7 @@ import { motion } from "motion/react";
 import {
   ArrowUpRight,
   Github,
-  Instagram,
-  Twitter,
+  Send,
   Zap,
   Palette,
   BarChart3,
@@ -21,6 +20,7 @@ import ScrollAudio from "./ScrollAudio";
 const NAV = [
   { id: "work", label: "Work" },
   { id: "services", label: "Services" },
+  { id: "skills", label: "Skills" },
   { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
@@ -44,8 +44,8 @@ function Nav() {
     >
       <div className="px-5 sm:px-8 lg:px-16 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <span className="font-heading italic text-white text-base sm:text-lg">
-            IFlexElite
+          <span className="font-heading italic text-white text-base sm:text-lg tracking-[0.3em]">
+            C A P T A I N
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-8">
@@ -142,7 +142,7 @@ function Hero() {
           transition={{ delay: 0.9 }}
           className="text-sm sm:text-base lg:text-lg text-white/55 font-body font-light leading-relaxed max-w-xl mb-8"
         >
-          I'm <span className="text-white">IFlexElite</span> — a web developer & UX
+          I'm <span className="text-white tracking-[0.25em]">C A P T A I N</span> — a web developer & UX
           strategist building fast, beautiful, conversion-focused experiences.
         </motion.p>
 
@@ -373,6 +373,75 @@ function Services() {
             </motion.div>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+const SKILLS = [
+  {
+    title: "Website Design",
+    desc: "Conversion-focused, unforgettable brand interfaces.",
+  },
+  {
+    title: "Web Hosting",
+    desc: "cPanel, free migration, lightning-fast performance.",
+  },
+  {
+    title: "Code Development",
+    desc: "HTML, CSS, JS, React — clean, scalable code.",
+  },
+  {
+    title: "Responsive Builds",
+    desc: "Perfect on any screen size, every time.",
+  },
+];
+
+function Skills() {
+  return (
+    <section
+      id="skills"
+      className="relative bg-black py-20 sm:py-28 px-5 sm:px-8 lg:px-16"
+    >
+      <motion.span
+        initial={{ opacity: 0, x: -15 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.4 }}
+        transition={{ duration: 0.5 }}
+        className="block text-white/30 font-body text-[10px] tracking-[0.3em] uppercase mb-3"
+      >
+        Skills
+      </motion.span>
+      <motion.h2
+        initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
+        className="text-3xl sm:text-5xl lg:text-7xl font-heading italic text-white tracking-tight leading-[0.9] mb-10 sm:mb-14 max-w-3xl"
+      >
+        Crafted with precision.
+      </motion.h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        {SKILLS.map((s, i) => (
+          <motion.div
+            key={s.title}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5, delay: i * 0.08 }}
+            className="liquid-glass rounded-2xl p-6 sm:p-8 flex flex-col transition-transform duration-500 hover:-translate-y-1"
+          >
+            <span className="text-white/30 font-body text-[10px] tracking-[0.3em] uppercase mb-4">
+              0{i + 1}
+            </span>
+            <h3 className="text-base sm:text-lg font-body font-semibold text-white mb-2">
+              {s.title}
+            </h3>
+            <p className="text-xs sm:text-sm font-body font-light text-white/45 leading-relaxed">
+              {s.desc}
+            </p>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
@@ -612,12 +681,12 @@ function Contact() {
           <div className="flex items-center gap-3 mb-6">
             <img
               src="https://avatars.githubusercontent.com/u/190835907?v=4"
-              alt="IFlexElite"
+              alt="CAPTAIN"
               className="w-12 h-12 rounded-full object-cover ring-1 ring-white/20"
             />
             <div>
-              <div className="text-white font-body text-sm font-medium">
-                IFlexElite
+              <div className="text-white font-body text-sm font-medium tracking-[0.25em]">
+                C A P T A I N
               </div>
               <div className="text-white/40 text-[11px] font-body">
                 Web Developer & UX Strategist
@@ -626,35 +695,24 @@ function Contact() {
           </div>
           <div className="space-y-3">
             <a
-              href="https://github.com/IFlexElite"
+              href="https://github.com/captain108"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between gap-3 text-white/70 hover:text-white text-sm font-body transition border-t border-white/10 pt-3"
             >
               <span className="inline-flex items-center gap-2.5">
-                <Github className="w-4 h-4" /> github.com/IFlexElite
+                <Github className="w-4 h-4" /> github.com/captain108
               </span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
             <a
-              href="https://x.com/IFlexElite"
+              href="https://t.me/captain_tfx"
               target="_blank"
               rel="noreferrer"
               className="flex items-center justify-between gap-3 text-white/70 hover:text-white text-sm font-body transition border-t border-white/10 pt-3"
             >
               <span className="inline-flex items-center gap-2.5">
-                <Twitter className="w-4 h-4" /> @IFlexElite
-              </span>
-              <ArrowUpRight className="w-3.5 h-3.5" />
-            </a>
-            <a
-              href="https://instagram.com/iflexelite"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center justify-between gap-3 text-white/70 hover:text-white text-sm font-body transition border-t border-white/10 pt-3"
-            >
-              <span className="inline-flex items-center gap-2.5">
-                <Instagram className="w-4 h-4" /> @iflexelite
+                <Send className="w-4 h-4" /> t.me/captain_tfx
               </span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
@@ -676,26 +734,20 @@ function Footer() {
     >
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
         <span className="text-white/30 text-xs font-body">
-          © 2026 IFlexElite. All rights reserved.
+          © 2026 CAPTAIN. All rights reserved.
         </span>
         <div className="flex items-center gap-5">
           <a
-            href="https://github.com/IFlexElite"
+            href="https://github.com/captain108"
             className="text-white/40 hover:text-white text-xs font-body"
           >
             GitHub
           </a>
           <a
-            href="https://x.com/IFlexElite"
+            href="https://t.me/captain_tfx"
             className="text-white/40 hover:text-white text-xs font-body"
           >
-            X
-          </a>
-          <a
-            href="https://instagram.com/iflexelite"
-            className="text-white/40 hover:text-white text-xs font-body"
-          >
-            Instagram
+            Telegram
           </a>
         </div>
       </div>
@@ -714,6 +766,7 @@ export default function Portfolio() {
         <Hero />
         <Work />
         <Services />
+        <Skills />
         <Stats />
         <Testimonials />
         <Contact />
