@@ -390,25 +390,6 @@ function Stats() {
           so you get one person who actually owns the outcome.
         </motion.p>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 rounded-2xl overflow-hidden">
-          {STATS.map((s, i) => (
-            <motion.div
-              key={s.num}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="bg-black p-5 sm:p-8 flex flex-col gap-2"
-            >
-              <span className="text-4xl sm:text-6xl lg:text-7xl font-heading italic text-white leading-none">
-                {s.num}
-              </span>
-              <p className="text-[11px] sm:text-sm font-body font-light text-white/50 leading-relaxed">
-                {s.desc}
-              </p>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
