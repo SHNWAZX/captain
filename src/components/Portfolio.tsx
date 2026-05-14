@@ -132,7 +132,7 @@ function Hero() {
         </motion.div>
 
         <BlurText
-          text="Crafting interfaces that feel inevitable."
+          text="Pixels with intent. Code with edge."
           delay={70}
           className="text-[2.6rem] leading-[0.95] sm:text-6xl lg:text-8xl xl:text-[7rem] font-heading italic text-white tracking-[-1.5px] mb-6 max-w-5xl"
         />
@@ -631,7 +631,7 @@ export default function Portfolio() {
         <Services />
         <Skills />
         <Stats />
-        <RedBanner />
+        
         <Contact />
       </main>
       <Footer />
