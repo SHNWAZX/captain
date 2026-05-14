@@ -5,6 +5,7 @@ import {
   Github,
   Instagram,
   Twitter,
+  Send,
   Zap,
   Palette,
   BarChart3,
