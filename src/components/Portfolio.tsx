@@ -144,7 +144,7 @@ function Hero() {
           transition={{ delay: 0.9 }}
           className="text-sm sm:text-base lg:text-lg text-white/55 font-body font-light leading-relaxed max-w-xl mb-8"
         >
-          I'm <span className="text-white">IFlexElite</span> — a web developer & UX
+          I'm <span className="text-white tracking-[0.25em]">C A P T A I N</span> — a web developer & UX
           strategist building fast, beautiful, conversion-focused experiences.
         </motion.p>
 
