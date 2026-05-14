@@ -438,62 +438,50 @@ const TESTIMONIALS = [
   },
 ];
 
-function Testimonials() {
+function RedBanner() {
   return (
-    <section id="testimonials" className="relative bg-black py-20 sm:py-28 px-5 sm:px-8 lg:px-16">
-      <motion.span
-        initial={{ opacity: 0, x: -15 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.4 }}
-        transition={{ duration: 0.5 }}
-        className="block text-white/30 font-body text-[10px] tracking-[0.3em] uppercase mb-3"
-      >
-        Kind words
-      </motion.span>
-      <motion.h2
-        initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: [0.4, 0, 0.2, 1] }}
-        className="text-3xl sm:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.95] mb-10 max-w-3xl"
-      >
-        Trusted by teams who care about details.
-      </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
-        {TESTIMONIALS.map((t, i) => (
-          <motion.div
-            key={t.name}
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="liquid-glass rounded-2xl p-7 sm:p-9 flex flex-col justify-between"
-          >
-            <div className="mb-7">
-              <span className="text-3xl font-heading italic text-white/15 block mb-3">
-                "
-              </span>
-              <p className="text-white/75 font-body font-light text-sm sm:text-base italic leading-relaxed">
-                {t.quote}
-              </p>
-            </div>
-            <div className="flex items-center gap-3 pt-4 border-t border-white/10">
-              <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                <span className="text-white/60 font-body text-xs font-medium">
-                  {t.initials}
-                </span>
-              </div>
-              <div>
-                <div className="text-white font-body font-medium text-sm">
-                  {t.name}
-                </div>
-                <div className="text-white/40 font-body font-light text-xs">
-                  {t.role}
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+    <section
+      id="testimonials"
+      className="relative overflow-hidden px-5 sm:px-8 lg:px-16 py-24 sm:py-32"
+      style={{
+        background:
+          "radial-gradient(ellipse at 70% 50%, #b30000 0%, #8a0000 45%, #5a0000 100%)",
+      }}
+    >
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-50"
+        src={heroVideoUrl}
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#5a0000]/40 via-transparent to-[#3a0000]/60" />
+      <div className="relative z-10 max-w-6xl">
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.5 }}
+          className="bg-white/10 backdrop-blur-md rounded-full inline-flex items-center gap-2 pl-1 pr-3 py-1 mb-8 ring-1 ring-white/20"
+        >
+          <span className="bg-white text-black rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider">
+            Open
+          </span>
+          <span className="text-white/90 text-[11px] font-light">
+            Available for new work · 2026
+          </span>
+        </motion.div>
+        <motion.h2
+          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.9, ease: [0.4, 0, 0.2, 1] }}
+          className="text-[2.6rem] leading-[0.95] sm:text-6xl lg:text-8xl xl:text-[7rem] font-heading italic text-white tracking-[-1.5px] max-w-5xl"
+        >
+          Crafting interfaces that feel inevitable.
+        </motion.h2>
       </div>
     </section>
   );
@@ -668,7 +656,7 @@ export default function Portfolio() {
         <Services />
         <Skills />
         <Stats />
-        <Testimonials />
+        <RedBanner />
         <Contact />
       </main>
       <Footer />
