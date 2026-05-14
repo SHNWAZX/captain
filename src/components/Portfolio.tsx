@@ -335,12 +335,6 @@ function Skills() {
   );
 }
 
-const STATS = [
-  { num: "60+", desc: "Sites shipped across SaaS, brand, and editorial" },
-  { num: "98%", desc: "Client satisfaction across the last two years" },
-  { num: "3.2x", desc: "Average conversion uplift after a redesign" },
-  { num: "5d", desc: "From concept to a production-ready launch" },
-];
 
 function Stats() {
   return (
