@@ -17,7 +17,7 @@ import AnimatedCursor from "./AnimatedCursor";
 import CopyGuard from "./CopyGuard";
 import ScrollAudio from "./ScrollAudio";
 import heroVideoUrl from "@/assets/hero-video.mp4?url";
-import avatarUrl from "@/assets/avatar.png";
+import avatarUrl from "@/assets/avatar.jpg";
 
 const NAV = [
   
