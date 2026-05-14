@@ -656,7 +656,7 @@ export default function Portfolio() {
         <Services />
         <Skills />
         <Stats />
-        <Testimonials />
+        <RedBanner />
         <Contact />
       </main>
       <Footer />
