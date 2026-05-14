@@ -164,7 +164,7 @@ function Hero() {
           className="flex items-center gap-3 flex-wrap"
         >
           <a
-            href="https://github.com/IFlexElite?tab=repositories"
+            href="https://github.com/captain108?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white text-black rounded-full px-5 py-3 text-sm font-body font-semibold inline-flex items-center gap-2"
@@ -517,7 +517,7 @@ function Contact() {
             className="flex items-center gap-3 flex-wrap"
           >
             <a
-              href="https://github.com/IFlexElite"
+              href="https://github.com/captain108"
               target="_blank"
               rel="noreferrer"
               className="bg-white text-black rounded-full px-5 py-3 text-sm font-body font-semibold inline-flex items-center gap-2"
@@ -525,7 +525,7 @@ function Contact() {
               Start a project <ArrowUpRight className="w-4 h-4" />
             </a>
             <a
-              href="https://github.com/IFlexElite"
+              href="https://github.com/captain108"
               target="_blank"
               rel="noreferrer"
               className="liquid-glass-strong rounded-full px-5 py-3 text-sm font-body font-medium text-white inline-flex items-center gap-2"
