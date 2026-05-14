@@ -22,6 +22,7 @@ import ScrollAudio from "./ScrollAudio";
 const NAV = [
   { id: "work", label: "Work" },
   { id: "services", label: "Services" },
+  { id: "skills", label: "Skills" },
   { id: "about", label: "About" },
   { id: "contact", label: "Contact" },
 ];
